@@ -13,7 +13,7 @@ import seaborn as sns
 
 
 #Loading our data
-data = pd.read_csv("C:\\Users\\Faith\\Downloads\\energydata_complete.csv")
+data = pd.read_csv("https://drive.google.com/file/d/1Eru_UHVc3WLHVveC9Q8K9QUxlzYeHt18/view.csv")
 data.head()
 
 
@@ -183,7 +183,6 @@ print(final_weights)
 
 #Train a ridge regression model with an alpha value of 0.4. 
 #Is there any change to the root mean squared error (RMSE) when evaluated on the test set?
-from sklearn.linear_model import Ridge
 ridge_reg =  Ridge(alpha = 0.4)
 ridge_reg.fit(X_train, y_train)
 rmse = np.sqrt(mean_squared_error(y_test, predicted_values))
